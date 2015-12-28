@@ -69,9 +69,12 @@ static UIImage* BABCropperViewCroppedAndScaledImageWithCropRect(UIImage *image, 
     else {
         scale = scaleSize.height/cropRect.size.height;
     }
+  
+  CGFloat screenScale = [UIScreen mainScreen].scale;
     
     CGContextRef bitmap = CGBitmapContextCreate(NULL, scaleSize.width, scaleSize.height, 8, scaleSize.width * 4, colorspace, kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-    
+  CGContextScaleCTM(bitmap, screenScale, screenScale);
+  
     CGRect drawRect = CGRectMake(0.0f, 0.0f, imageSize.width, imageSize.height);
     drawRect = CGRectApplyAffineTransform(drawRect, CGAffineTransformMakeScale(scale, scale));
     
