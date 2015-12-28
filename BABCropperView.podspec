@@ -9,11 +9,11 @@
 
 Pod::Spec.new do |s|
   s.name             = "BABCropperView"
-  s.version          = "0.4.4"
+  s.version          = "0.4.4.1"
   s.summary          = "A customizable image cropper view based on UIScrollView."
   s.description      = <<-DESC
                        A customizable image cropper view based on UIScrollView.
-											 
+
 											 Supports iOS 7.0+
 
 											 * Crop size is fully configurable
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 											 * Uses memory efficient image crop which handles multiple image orientations
 
 											 This is a UIView subclass which allows a user to crop an image to a desired size.
-											 
+
                        DESC
   s.homepage         = "https://github.com/brynbodayle/BABCropperView"
 	s.screenshots			 = "http://brynbodayle.com/Files/BABCropperView.gif"
